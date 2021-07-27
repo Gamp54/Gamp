@@ -2,20 +2,15 @@
 /* delete double space */
 int main()
 {
-	int c, ns;
-	ns = 0;
+	int c, b;
+	b=0;
 	while ((c = getchar()) != EOF)
 	{
-		if (c == ' ') 
-		{
-			++ns;
-			if (ns != 2)
-				putchar(32);
-		}
-		else 	
-		{
+		if (c != ' ')
 			putchar(c);
-			ns = 0;
-		}
+		else
+			if (b != ' ')
+			putchar(c);
+		b = c;
 	}	
 }
